@@ -1,5 +1,5 @@
 
-resource "azurerm_storage_account" "storages" {
+resource "azurerm_storage_account" "az_storage_accounts" {
   count                    = 3 # 0,1,2
   name                     = "akkannedari${count.index + 1}"
   location                 = azurerm_resource_group.devops_rg.location
