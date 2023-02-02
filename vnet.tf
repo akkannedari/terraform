@@ -5,6 +5,7 @@ resource "azurerm_virtual_network" "vnet" {
   location            = azurerm_resource_group.devops_rg.location
   resource_group_name = azurerm_resource_group.devops_rg.name
   address_space       = var.vnet_cider
+  dns_servers         = ["8.8.8.8", "8.8.4.4"]
 
   tags = {
     Name = var.environment
